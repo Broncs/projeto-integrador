@@ -1,0 +1,29 @@
+<%- include('partials/header') %>
+<h1>hello</h1>
+<form class="" action="/clientes/editar" method="post">
+   <div class="form-group">
+      <label for="formGroupExampleInput">Nome</label>
+      <input type="text" value='<%=cliente.cliente%>' name="nome" class="form-control" id="formGroupExampleInput"
+         placeholder="Nome Completo">
+   </div>
+   <div class="form-group">
+      <label for="formGroupExampleInput2">Email</label>
+      <input type="email" value='<%=cliente.email%>' name="email" class="form-control" id="formGroupExampleInput2"
+         placeholder="Email">
+   </div>
+   <div class="form-group">
+      <label for="formGroupExampleInput3">Telefone</label>
+      <input type="number" value='<%=cliente.telefone%>' name="telefone" class="form-control"
+         id="formGroupExampleInput3" placeholder="(opcional)">
+   </div>
+   <div class="form-group">
+      <label for="formGroupExampleInput4">Whats App</label>
+      <input type="number" value='<%=cliente.whats%>' pattern="/^-?\d+\.?\d*$/"
+         onKeyPress="if(this.value.length==11) return false;" name="whatsapp" class="form-control"
+         id="formGroupExampleInput4" placeholder="11 Digitos">
+   </div>
+   <button type="submit" name='confirmar' value="<%=cliente._id%>" class="btn btn-success">Confirmar</button>
+   <button class="btn btn-danger"><a href="/">Cancelar</a></button>
+</form>
+
+<%- include('partials/footer') %>

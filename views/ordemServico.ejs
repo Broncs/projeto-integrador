@@ -1,0 +1,34 @@
+<%- include('partials/header') %>
+
+
+<h1>Ordem de serviço</h1>
+<form action="/ordemServico" method="post">
+   <div class="form-group">
+      <label for="formGroupExampleInput">Cliente</label>
+      <input name='cliente' type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome">
+   </div>
+   <div class="form-group">
+      <label for="formGroupExampleInput1">Descricão da peça</label>
+      <input name='descricao' type="text" class="form-control" id="formGroupExampleInput1"
+         placeholder="ex: Blusa , Calça , Vestido">
+   </div>
+   <div class="form-group">
+      <label for="formGroupExampleInput2">Defeito</label>
+      <textarea name='defeito' type="text" class="form-control" id="formGroupExampleInput2"
+         placeholder="Descrição do defeito da peça"></textarea>
+   </div>
+   <div class="form-group">
+      <label for="formGroupExampleInput3">Valor R$</label>
+      <input name='valor' type="number" step=0.01 class="form-control" id="formGroupExampleInput3"
+         placeholder="valor do concerto">
+   </div>
+   <div class="form-group">
+      <label for="formGroupExampleInput4">Data Entrega</label>
+      <input name='data' type="date" id="formGroupExampleInput4" class="form-control data-form">
+   </div>
+
+   <button type="submit" name='button' class="btn btn-success">Cadastrar</button>
+   <button type="button" class="btn btn-danger"><a href="/">Voltar</a></button>
+</form>
+
+<%- include('partials/footer') %>

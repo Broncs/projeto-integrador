@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+<h1>Ordem de Serviço</h1>
+<div class="singleOrder">
+   <ul class="singleUl">
+      <li><span>Cliente:</span> <%=servico.cliente %></li>
+      <li><span>Descrição da peça:</span>
+         <p><%=servico.descricao %></p>
+      </li>
+      <li><span>Defeito da peça:</span>
+
+         <p class='.text-nowrap'><%=servico.defeito %></p>
+      </li>
+      <li><span>Valor do serviço:</span>
+         <p>R$: <%=servico.valor%></p>
+      </li>
+      <li><span>Data da entrega:</span>
+         <%moment.locale('pt-br')%>
+
+         <p> <%= moment(servico.data).format('D MMMM, YYYY')%></p>
+      </li>
+   </ul>
+</div>
+
+
+
+
+
+<%- include('partials/footer') %>

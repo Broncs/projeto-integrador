@@ -1,0 +1,48 @@
+<%- include('partials/header') %>
+
+<h1>Serviços em Processo</h1>
+<table class="table">
+   <thead class="thead-light">
+      <tr>
+         <th>Nº</th>
+         <th>Nome Cliente</th>
+         <th>Descrição</th>
+         <th>Defeito</th>
+         <th>Valor R$</th>
+         <th>Data de Entrega</th>
+         <th>Visualizar / Exluir</th>
+      </tr>
+   </thead>
+   <tbody>
+      <% servicos.forEach((servico , index)=>{ %>
+      <form action="/delete" method="post">
+         <tr>
+            <th scope="row"><%= index+1%></th>
+            <td><%= servico.cliente%></td>
+            <td><%= servico.descricao%></td>
+            <%if(servico.defeito.length > 20){ %>
+            <td><%= servico.defeito.substring(0, 20)+ 
+                  " ..."%></td>
+            <% }else { %>
+            <td><%= servico.defeito%></td>
+            <%} %>
+
+            <td>R$: <%=servico.valor%></td>
+            <%moment.locale('pt-br')%>
+            <td><%= moment(servico.data).format('D MMMM, YYYY')%></td>
+
+            <td>
+               <a class="btn btn-success btn-ordem" value="<%=servico._id%>" href="/servicos/<%=servico._id%>"
+                  role="button">Ordem</a>
+               <button type='submit' value="<%=servico._id%>" name='delete' class="btn btn-danger btn-excluir" href="/"
+                  role="button">Excluir</button>
+            </td>
+         </tr>
+      </form>
+      <% }) %>
+
+   </tbody>
+</table>
+
+
+<%- include('partials/footer') %>

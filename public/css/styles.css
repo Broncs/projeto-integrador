@@ -1,0 +1,59 @@
+.container-fluid {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.navbar {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  letter-spacing: 5px;
+}
+.navbar-nav li a:hover {
+  color: #1abc9c !important;
+}
+
+.brand-name {
+  display: inline-block;
+  margin-top: 10px;
+  color: #777777;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+
+ul li span {
+  font-weight: bold;
+}
+.singleUl {
+  padding: 0;
+}
+
+.singleUl li {
+  font-size: 1.6rem;
+  margin: 1rem;
+}
+
+.singleOrder {
+  background-color: #ccc;
+  padding: 1rem;
+}
+
+.data-form {
+  width: 50%;
+}
+
+.btn-ordem,
+.btn-excluir {
+  margin-bottom: 0.5rem;
+}
+.invalid-feedback {
+  display: none;
+}
